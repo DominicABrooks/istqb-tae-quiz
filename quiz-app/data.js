@@ -179,6 +179,138 @@ const courseData = [
         ],
         "correctAnswer": 3,
         "explanation": "Syllabus 1.1.1 and 1.2.2 emphasize that not all tests can be automated, it's more than recording, and programming skills are often required."
+},
+      {
+        "question": "A team decides to automate a highly volatile UI component that changes daily. According to the syllabus, what is the most likely outcome?",
+        "options": [
+                "Significant time and effort will be spent maintaining the test automation solution.",
+                "The system reliability will improve due to faster feedback.",
+                "The test execution consistency will increase across cycles.",
+                "The initial investment will be paid off quickly."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 1.1.1 lists 'Time to maintain a test automation solution' as a disadvantage, especially when tests are rigid and less adaptable to SUT changes."
+},
+      {
+        "question": "Which phase of the Waterfall model typically involves the execution of automated test runs?",
+        "options": [
+                "Requirements phase",
+                "Implementation phase",
+                "Verification phase",
+                "Maintenance phase"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 1.2.1 states that in the waterfall model, test runs usually take place during the verification phase."
+},
+      {
+        "question": "Why is it recommended to select tools whose language matches the language of the SUT for technical testers?",
+        "options": [
+                "It allows testers to replace developers entirely.",
+                "It facilitates cross-training and efficient debugging of test automation defects with developers.",
+                "It reduces the licensing costs of the test tool.",
+                "It makes the test automation solution more secure."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.2.2 notes that matching languages provides advantages like better collaboration and debugging with developers."
+},
+      {
+        "question": "When considering 'Efficiency' in test automation, which of the following is a primary objective?",
+        "options": [
+                "Eliminating all manual testers.",
+                "Improving test speed and resource utilization.",
+                "Reducing the number of automated test cases.",
+                "Increasing the complexity of the SUT."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 lists 'Improving test efficiency and speed' as a key purpose of test automation."
+},
+      {
+        "question": "A manager claims that test automation can verify the 'feel' and 'look' of the UI as effectively as a human. What is the TAE's best response?",
+        "options": [
+                "Agree, as modern AI tools can handle aesthetics perfectly.",
+                "Explain that automation only checks what it is programmed to do and may not be suitable for subjective quality characteristics.",
+                "Suggest buying a more expensive tool to solve the problem.",
+                "Propose automating only the CSS values of the UI."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 mentions that some quality characteristics may not be testable with automation as they are not machine-interpretable."
+},
+      {
+        "question": "In the V-model, when is the planning of test automation typically performed?",
+        "options": [
+                "During the verification phase.",
+                "In the early phase of the software development lifecycle.",
+                "Only after the software is fully implemented.",
+                "During the maintenance phase."
+        ],
+        "correctAnswer": 1,
+        "explanation": "According to official justifications (and general V-model theory mentioned in 1.2.1), test planning is an early lifecycle activity."
+},
+      {
+        "question": "What is a potential disadvantage of test automation related to the 'Human Factor'?",
+        "options": [
+                "Automated tests are more subject to human error than manual tests.",
+                "Test automation can introduce additional defects in the code.",
+                "Test automation provides too much feedback, overwhelming the team.",
+                "Test automation makes manual testers redundant in all cases."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 lists 'Introduction of additional defects by test automation' as a potential disadvantage."
+},
+      {
+        "question": "Which of the following is NOT an objective of test automation according to Chapter 1.1?",
+        "options": [
+                "Increasing test coverage.",
+                "Eliminating the need for a programmed test oracle.",
+                "Improving system reliability.",
+                "Providing quicker feedback regarding SUT quality."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 states automation can ONLY check results that can be verified by an automated test oracle; it does not eliminate the need for one."
+},
+      {
+        "question": "In Agile development, what does 'In-Sprint Automation' mean?",
+        "options": [
+                "Automating all tests within the same sprint that the feature is developed.",
+                "Automating only the unit tests within the sprint.",
+                "Running the regression suite every night.",
+                "Testing only the UI at the end of the sprint."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 1.2.1 mentions in-sprint automation as a goal where all test levels are covered with appropriate automation during the sprint."
+},
+      {
+        "question": "Which approach is most suitable for a team where testers have 'little to no programming experience'?",
+        "options": [
+                "Custom open-source solution.",
+                "Low-code or no-code commercial solution.",
+                "Linear scripting in Java.",
+                "TDD approach."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.2.2 mentions that for testers with little programming experience, low-code/no-code solutions may be viable."
+},
+      {
+        "question": "Test automation is 'more effective and efficient in use of test resources'. What does this imply?",
+        "options": [
+                "Testers no longer need to work.",
+                "Resources can be freed up for other tasks like exploratory testing.",
+                "Hardware is used 100% of the time.",
+                "Fewer computers are needed for testing."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 lists 'more effective and efficient in use of test resources' as an advantage, freeing up humans for higher-value tasks."
+},
+      {
+        "question": "Which of the following is a limitation of test automation regarding 'Unexpected Outcomes'?",
+        "options": [
+                "It catches all unexpected bugs.",
+                "It verifies ONLY what automated tests are programmed to do.",
+                "It automatically ignores system crashes.",
+                "It creates its own expected results dynamically."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 1.1.1 lists 'Verifying only what automated tests are programmed to do' as a limitation."
 }]
   },
   {
@@ -345,6 +477,149 @@ const courseData = [
         ],
         "correctAnswer": 1,
         "explanation": "Syllabus 4.1.1 and 2.2.1 emphasize using pilots/PoCs to evaluate tools against the actual SUT and its requirements."
+},
+      {
+        "question": "Which role is primarily responsible for ensuring 'Architecture Transparency' in the SUT?",
+        "options": [
+                "Test Automation Engineer",
+                "Software Architect",
+                "Project Manager",
+                "Business Analyst"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.1.1 states that design for testability is generally performed by a software architect as it is a non-functional requirement."
+},
+      {
+        "question": "What is the primary purpose of a 'Comparison Table' in the tool evaluation process?",
+        "options": [
+                "To track the defects found during manual testing.",
+                "To allow stakeholders to see differences between tools based on specific direct and indirect requirements.",
+                "To calculate the final ROI of the automation project.",
+                "To store the locators for the Page Object Model."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.2.2 describes the comparison table as a tool to capture findings and reflect on requirements for stakeholder decision making."
+},
+      {
+        "question": "In which environment is white-box testing most commonly performed using an IDE to identify code quality problems early?",
+        "options": [
+                "Local development environment",
+                "Integration environment",
+                "Preproduction environment",
+                "Operational environment"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 2.1.2 notes that in a local development environment, white box testing can be performed using an IDE."
+},
+      {
+        "question": "A system provides an API that returns the internal status of a background process. This improves which aspect of testability?",
+        "options": [
+                "Controllability",
+                "Observability",
+                "Maintainability",
+                "Scalability"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.1.1 defines Observability as providing interfaces that give insight into the SUT."
+},
+      {
+        "question": "When analyzing an SUT for automation, which factor helps determine the 'Span and Lifetime' of the TAS?",
+        "options": [
+                "The color scheme of the GUI.",
+                "The software products, product lines, and families that should be supported.",
+                "The number of manual test cases already written.",
+                "The availability of the project manager."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.2.1 lists 'Which software products, product lines and families should be supported' as a requirement for defining the span and lifetime of the TAS."
+},
+      {
+        "question": "Which technique allows for assessing functional and non-functional characteristics in real-time with actual user interactions?",
+        "options": [
+                "Canary release in the production environment.",
+                "Component testing in the build environment.",
+                "API testing in the integration environment.",
+                "Static analysis in the local environment."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 2.1.2 mentions production environments can assess characteristics using best practices like canary releases."
+},
+      {
+        "question": "A TAE needs to emulate a 3rd party application that is currently unreachable. This addresses which requirement for the TAS?",
+        "options": [
+                "Test data quality",
+                "Availability of test data",
+                "Possible methods to emulate unreachable cases",
+                "Test roles and skill sets"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 2.2.1 specifically mentions 'Possible methods and ways to emulate unreachable cases (e.g. 3rd party applications involved)'."
+},
+      {
+        "question": "A developer sets 'Accessibility Identifiers' manually for each UI component. This is an example of configuring for:",
+        "options": [
+                "Observability",
+                "Controllability",
+                "Architecture transparency",
+                "Scalability"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.1.1 lists accessibility identifiers as a solution for better testability and part of controllability/observability."
+},
+      {
+        "question": "When evaluating a tool's 'Scalability', what are you primarily assessing?",
+        "options": [
+                "The tool's ability to run on a single developer's machine.",
+                "The ability to expand the overall test architecture and handle growth in tests/environments.",
+                "The tool's color scheme and user interface.",
+                "The number of manual testers that can use it."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.2.2 mentions assessing the scalability, maintainability, and modifiability of tools."
+},
+      {
+        "question": "Which environment is the first one where monitoring should be present to enable efficient investigation of defects?",
+        "options": [
+                "Local development environment",
+                "Build environment",
+                "Integration environment",
+                "Unit test environment"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 2.1.2 states that integration environments are the first where monitoring should be present."
+},
+      {
+        "question": "What is 'Controllability' in the context of an SUT?",
+        "options": [
+                "The ability to see the logs of the system.",
+                "The ability to perform actions on the SUT through interfaces like UI elements or function calls.",
+                "The ability to control the version of the SUT.",
+                "The ability to control the manual testers' schedules."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.1.1 defines Controllability as providing interfaces that can be used to perform actions on the SUT."
+},
+      {
+        "question": "Which characteristic of a TAA ensures it can support multiple product families?",
+        "options": [
+                "Modifiability",
+                "Compatibility",
+                "Span",
+                "Maintainability"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 2.2.1 mentions requirements should consider 'which software products, product lines and families should be supported' to define the 'span'."
+},
+      {
+        "question": "A comparison table lists tools in columns and requirements in rows. What do the cells typically contain?",
+        "options": [
+                "Only the price of the tool.",
+                "Properties of each tool regarding each requirement and about priorities.",
+                "The names of the developers who like the tool.",
+                "The total number of bugs found by the tool."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 2.2.2 describes cells as containing properties of each tool regarding each requirement."
 }]
   },
   {
@@ -538,6 +813,281 @@ const courseData = [
         ],
         "correctAnswer": 2,
         "explanation": "Syllabus 3.1.4 defines Keyword-Driven Testing as test cases consisting of a list or table of test steps derived from keywords."
+},
+      {
+        "question": "What is the primary purpose of the 'Generic Test Automation Architecture' (gTAA)?",
+        "options": [
+                "To provide a single tool that solves all automation problems.",
+                "To provide a high-level design concept and abstract view of communication between systems.",
+                "To define the exact code structure for a Java-based framework.",
+                "To replace the need for a SUT interface."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.1 defines gTAA as a high-level design concept providing an abstract view of communication."
+},
+      {
+        "question": "In the gTAA, which interface describes the mapping of test case definitions and automated test cases?",
+        "options": [
+                "SUT Interface",
+                "Project Management Interface",
+                "Test Management Interface",
+                "Configuration Management Interface"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.1 states the test management interface describes the mapping of test case definitions and automated test cases."
+},
+      {
+        "question": "Which core capability of a TAS supports the automated design of test cases based on a test model?",
+        "options": [
+                "Test Generation",
+                "Test Definition",
+                "Test Execution",
+                "Test Adaptation"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 3.1.1 defines 'Test Generation' as supporting automated design based on a test model."
+},
+      {
+        "question": "Which layer of the TAF provides the necessary functionality to adapt automated tests to various components or interfaces of the SUT?",
+        "options": [
+                "Test Generation Layer",
+                "Test Execution Layer",
+                "Test Adaptation Layer",
+                "Core Libraries Layer"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.1 and 3.1.3 describe the Test Adaptation layer/capability as connecting to the SUT via APIs, protocols, etc."
+},
+      {
+        "question": "A Test Automation Solution (TAS) is implemented with tools and SUT-specific adaptors. What defines the overall technical design for the TAS?",
+        "options": [
+                "The Test Automation Framework (TAF)",
+                "The Test Automation Architecture (TAA)",
+                "The Test Harness",
+                "The Test Scripts"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.2 states that the TAA defines the technical design for the overall TAS."
+},
+      {
+        "question": "Which TAF layer contains all the SUT-dependent libraries that inherit from core libraries or use their facades?",
+        "options": [
+                "Test Scripts Layer",
+                "Business Logic Layer",
+                "Core Libraries Layer",
+                "Test Execution Layer"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.3 states all SUT-dependent libraries are stored in the Business Logic layer."
+},
+      {
+        "question": "What is the recommended approach for the number of layers in a TAF to avoid over-complicating the design?",
+        "options": [
+                "As many layers as possible for maximum abstraction.",
+                "Exactly one layer for simplicity.",
+                "Keep the number of TAF layers low.",
+                "Layers should only be used for UI testing."
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.3 recommends keeping the number of TAF layers low to avoid complexity."
+},
+      {
+        "question": "Which development approach results in automated test cases by following a 'Red, Green, Refactor' cycle?",
+        "options": [
+                "Behavior-Driven Development (BDD)",
+                "Data-Driven Testing (DDT)",
+                "Test-Driven Development (TDD)",
+                "Keyword-Driven Testing (KDT)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.4 describes TDD as 'test, code, and refactor' or 'red, green, and refactor'."
+},
+      {
+        "question": "Which scripting approach allows running the same test script multiple times with different inputs from external files (e.g. .csv, .xlsx)?",
+        "options": [
+                "Linear Scripting",
+                "Structured Scripting",
+                "Data-Driven Testing (DDT)",
+                "Behavior-Driven Development (BDD)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.4 defines DDT as providing test scripts with data from external sources to run multiple times."
+},
+      {
+        "question": "What is a primary disadvantage of 'Capture/Playback' tools that do not expose code (no-code)?",
+        "options": [
+                "They are too fast to use.",
+                "They are hard to maintain, scale, and evolve.",
+                "They require too much programming knowledge.",
+                "They only work for API testing."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.4 lists 'Hard to maintain, scale and evolve' as a con for Capture/Playback."
+},
+      {
+        "question": "Which design pattern is used to hide complex implementation details and only expose what is needed for the test cases?",
+        "options": [
+                "Singleton Pattern",
+                "Facade Pattern",
+                "Observer Pattern",
+                "Factory Pattern"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.5 mentions the Facade pattern hides implementation details to only expose what testers need."
+},
+      {
+        "question": "In the Page Object Model (POM), what should a TAE update if the SUT's internal identifier for a 'Submit' button changes?",
+        "options": [
+                "Every test script that uses the button.",
+                "The business logic layer entirely.",
+                "Only the locator inside the corresponding page model class.",
+                "The core libraries layer."
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.5 states POM allows updates in only one place (the locator inside a page model)."
+},
+      {
+        "question": "Which approach uses natural language formats like 'Given, When, Then' to formulate acceptance criteria?",
+        "options": [
+                "Keyword-Driven Testing (KDT)",
+                "Behavior-Driven Development (BDD)",
+                "Model-Based Testing (MBT)",
+                "Linear Scripting"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.4 defines BDD as leveraging natural language format (Given/When/Then)."
+},
+      {
+        "question": "What is the 'Test Harness' (also known as a test runner)?",
+        "options": [
+                "A set of manual test cases.",
+                "A tool used to run automated tests and log results.",
+                "The documentation for the TAS.",
+                "The physical hardware the SUT runs on."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.3 defines the TAF as including a test harness (test runner)."
+},
+      {
+        "question": "Which SOLID principle suggests that software entities should be open for extension but closed for modification?",
+        "options": [
+                "Single Responsibility",
+                "Open-closed",
+                "Liskov Substitution",
+                "Interface Segregation"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.5 lists the Open-closed principle as part of SOLID."
+},
+      {
+        "question": "Which design pattern ensures that there is only one instance of a driver communicating with the SUT at any time?",
+        "options": [
+                "Facade",
+                "POM",
+                "Singleton",
+                "Flow Model"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.5 mentions the Singleton pattern is often used to ensure only one driver communicates with the SUT."
+},
+      {
+        "question": "Which scripting approach requires the least initial investment but is only feasible for small scopes and stable systems?",
+        "options": [
+                "Structured Scripting",
+                "Linear Scripting",
+                "Keyword-Driven Testing",
+                "Behavior-Driven Development"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.4 lists 'Easy to set up' but 'Hard to maintain' for Linear Scripting."
+},
+      {
+        "question": "Which capability separates the test definition from the SUT and test tools, containing means to define high-level and low-level tests?",
+        "options": [
+                "Test Generation",
+                "Test Definition",
+                "Test Execution",
+                "Test Logging"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.1 defines Test Definition as supporting the definition and implementation of test cases/suites."
+},
+      {
+        "question": "What is the benefit of using 'Flow Model Pattern' over basic POM?",
+        "options": [
+                "It makes the tests run faster.",
+                "It allows for better reusability of user actions/flows across multiple test scripts.",
+                "It eliminates the need for locators.",
+                "It automatically generates test data."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.5 states the Flow Model pattern provides improved abstraction as test steps (flows) can be reused."
+},
+      {
+        "question": "In gTAA, what does the 'SUT Interface' describe?",
+        "options": [
+                "The connection between the SUT and the TAF.",
+                "The user's interaction with the dashboard.",
+                "The connection between the TAF and the defect tracker.",
+                "The version control system for test scripts."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 3.1.1 states the SUT interface describes the connection between the SUT and the TAF."
+},
+      {
+        "question": "Which approach is best for involving non-technical stakeholders (e.g. Business Analysts) in specifying automated tests through spreadsheets?",
+        "options": [
+                "Linear Scripting",
+                "Structured Scripting",
+                "Keyword-Driven Testing (KDT)",
+                "Test-Driven Development (TDD)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 3.1.4 states KDT allows test analysts and business analysts to be involved in creation via keywords/data."
+},
+      {
+        "question": "What is a disadvantage of the 'Behavior-Driven Development' (BDD) approach if not managed correctly?",
+        "options": [
+                "It requires no communication with developers.",
+                "Many teams only use it for writing test cases in natural language without involving business reps.",
+                "It only works for negative test conditions.",
+                "It makes debugging easier than structured scripting."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.4 lists this as a con: teams confuse BDD with just writing natural language without true collaboration."
+},
+      {
+        "question": "Which OOP principle involves hiding the internal state of an object and only exposing necessary methods?",
+        "options": [
+                "Encapsulation",
+                "Abstraction",
+                "Inheritance",
+                "Polymorphism"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Standard OOP principle (Encapsulation) mentioned in 3.1.5."
+},
+      {
+        "question": "Which layer of the TAF provides the foundation, including test runner, libraries, and scripts?",
+        "options": [
+                "Test Automation Solution (TAS)",
+                "Test Automation Framework (TAF)",
+                "Test Automation Architecture (TAA)",
+                "Test Adaptation Layer"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.3 defines TAF as the foundation of a TAS."
+},
+      {
+        "question": "Which scripting approach introduces reusable elements, test steps, and user journeys, requiring programming knowledge?",
+        "options": [
+                "Linear Scripting",
+                "Structured Scripting",
+                "Capture/Playback",
+                "No-code Automation"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 3.1.4 defines Structured Scripting as having reusable elements and requiring programming knowledge."
 }]
   },
   {
@@ -707,6 +1257,160 @@ const courseData = [
         ],
         "correctAnswer": 2,
         "explanation": "Syllabus 4.2.1 lists automatic updates on test harnesses (agents) and version changes on devices as a common technical risk."
+},
+      {
+        "question": "What is the recommended duration and scope of a 'Test Automation Pilot' project?",
+        "options": [
+                "It should cover the entire regression suite and take 6 months.",
+                "It should not take a long time to conduct and should have a defined scope of validation.",
+                "It should only be done manually to see if automation is possible.",
+                "It should involve only the business stakeholders."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.1.1 states a pilot does not take long and its scope of validation should be defined."
+},
+      {
+        "question": "Which technical risk is specifically associated with test automation agents needing to reach a specific server behind a network barrier?",
+        "options": [
+                "Resource utilization",
+                "Firewall openings",
+                "Packaging",
+                "Updating"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.2.1 lists firewall openings as a technical deployment risk."
+},
+      {
+        "question": "What is a 'Test Fixture' in the context of a test harness?",
+        "options": [
+                "A bug that is fixed in the SUT.",
+                "Something that must be available (preconditions/postconditions) for tests to run.",
+                "A permanent member of the test team.",
+                "The physical server the test runs on."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.2.1 defines test fixtures as items that must be available for tests to run (preconditions/postconditions)."
+},
+      {
+        "question": "Which logging level is used to store basic information about a test case and what happens during its execution?",
+        "options": [
+                "Error",
+                "Warn",
+                "Info",
+                "Debug"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 4.2.1 defines 'Info' as the level showing basic information about execution."
+},
+      {
+        "question": "A team notices that their test agents often run out of memory during a long regression run. This is a risk of:",
+        "options": [
+                "Firewall settings",
+                "Resource utilization",
+                "Packaging",
+                "Test structuring"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.2.1 lists 'Resource utilization (e.g. CPU, and RAM)' as a deployment risk."
+},
+      {
+        "question": "Why is 'Avoid Hardcoding' a key principle of maintainable test automation code?",
+        "options": [
+                "Because hardcoding makes the tests run faster.",
+                "Because data can change frequently, and hardcoding makes it time-consuming to maintain.",
+                "Because hardcoding is a requirement for SOLID principles.",
+                "Because hardcoding prevents security violations."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.3.1 explains that avoiding hardcoding reduces maintenance effort when data changes."
+},
+      {
+        "question": "What should a TAE do during a pilot project to identify integration issues early?",
+        "options": [
+                "Avoid CI/CD until the pilot is finished.",
+                "Try to integrate the solution and implemented code into the CI/CD pipeline.",
+                "Only run tests manually to ensure accuracy.",
+                "Wait for the developers to finish all SUT features."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.1.1 recommends integrating the solution into CI/CD during the pilot to expose early issues."
+},
+      {
+        "question": "Which logging level is similar to Debug but contains even more granular information?",
+        "options": [
+                "Fatal",
+                "Warn",
+                "Trace",
+                "Error"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Syllabus 4.2.1 defines 'Trace' as similar to Debug but with more info."
+},
+      {
+        "question": "What is the primary goal of using 'Clean Code' principles in test automation?",
+        "options": [
+                "To make the code harder to read for non-programmers.",
+                "To ensure high maintainability, readability, and scalability of the test code.",
+                "To eliminate the need for any documentation.",
+                "To ensure the SUT has fewer defects."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.3.1 references Clean Code for improving readability and maintainability."
+},
+      {
+        "question": "A TAE decides to use 'Static Analyzers' on the test automation code. This is recommended to:",
+        "options": [
+                "Increase the execution speed of tests.",
+                "Ensure high quality and follow programming standards in the test code.",
+                "Automatically generate new test cases.",
+                "Replace the need for manual code reviews."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.3.1 recommends static analyzers to ensure high quality of the test automation code."
+},
+      {
+        "question": "Which non-technical aspect should be considered during a pilot project to ensure long-term success?",
+        "options": [
+                "Licensing and organization rules.",
+                "The version of the IDE used.",
+                "The speed of the network switch.",
+                "The number of classes in the TAF."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 4.1.1 lists licensing and organization rules as non-technical aspects to evaluate."
+},
+      {
+        "question": "A team decides to use a 'Standard Naming Convention' for all test classes and methods. This is a recommendation for:",
+        "options": [
+                "Test execution speed",
+                "Maintainability",
+                "SUT architecture",
+                "Configuration management"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 4.3.1 and 8.1.3 mention naming conventions as a factor for maintainability."
+},
+      {
+        "question": "What is the primary purpose of 'Test Logging' in a TAS?",
+        "options": [
+                "To store user data for later marketing.",
+                "To provide an audit trail and information about test results for analysis.",
+                "To replace the need for a defect tracker.",
+                "To slow down the test execution."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.1 and 4.2.1 describe logging as a source for analyzing results and providing an audit trail."
+},
+      {
+        "question": "Which risk is associated with the 'packaging' of test automation code?",
+        "options": [
+                "Version control and sharing across an organization (premises or cloud).",
+                "The amount of RAM the test uses.",
+                "The naming of the variables.",
+                "The color of the UI."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 4.2.1 mentions packaging is about version control and sharing testware."
 }]
   },
   {
@@ -853,6 +1557,127 @@ const courseData = [
         ],
         "correctAnswer": 1,
         "explanation": "Syllabus 5.1.1 describes deployment checks as simple scripts to ensure the SUT is deployed, but not verifying functional suitability broadly."
+},
+      {
+        "question": "Where are 'Component Integration Tests' typically placed in a CI/CD pipeline?",
+        "options": [
+                "Only in the production deployment phase.",
+                "In the build step, often executed together with component tests.",
+                "In a separate nightly pipeline only.",
+                "They are never automated."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.1 states component integration tests can be part of the continuous integration pipeline (build step)."
+},
+      {
+        "question": "What is a 'Deployment Check' in the context of continuous deployment?",
+        "options": [
+                "A full regression test suite of 500 tests.",
+                "A few simple automated scripts to ensure the SUT is deployed and reachable.",
+                "A manual review by the product owner.",
+                "A static analysis scan of the production server."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.1 defines deployment checks as simple scripts to ensure the SUT is deployed."
+},
+      {
+        "question": "Which approach allows a successful deployment to proceed while running longer test suites (like nightly regression) separately?",
+        "options": [
+                "Running all tests as part of the blocking deployment phase.",
+                "Running test cases as a separate pipeline triggered by successful deployment.",
+                "Skipping all tests during deployment.",
+                "Running only unit tests."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.1 mentions running tests as a separate pipeline as a valid approach for longer suites."
+},
+      {
+        "question": "In configuration management for test automation, what is often stored along with the testware for different environments?",
+        "options": [
+                "The entire SUT source code.",
+                "Test environment configurations (e.g. URLs, credentials).",
+                "The project manager's contact info.",
+                "Only the test results."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.2 states test environment configuration is usually stored with the testware."
+},
+      {
+        "question": "What is 'Contract Testing' primarily used for?",
+        "options": [
+                "To test the legal contracts of the company.",
+                "To verify that services can communicate correctly and adhere to a consensus on interactions.",
+                "To test the speed of the UI rendering.",
+                "To replace the need for unit testing."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.3 defines contract testing as verifying services can communicate and data is consistent with rules."
+},
+      {
+        "question": "Which approach to contract testing involves the consumer setting expectations for the provider?",
+        "options": [
+                "Provider-driven approach",
+                "Consumer-driven approach",
+                "Tester-driven approach",
+                "API-driven approach"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.3 defines the consumer-driven approach as the consumer setting expectations."
+},
+      {
+        "question": "What information is essential for a TAE when building a strategy for automated API testing?",
+        "options": [
+                "The color of the UI theme.",
+                "API connections and documentation (parameters, headers, request-response objects).",
+                "The names of the developers' pets.",
+                "The physical location of the server."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.3 lists API connections and documentation as crucial information."
+},
+      {
+        "question": "How can a 'Feature Toggle' be leveraged in test automation configuration management?",
+        "options": [
+                "To delete tests that are no longer needed.",
+                "To identify which test suites to execute on a given release/environment based on enabled features.",
+                "To turn off the computer when tests are finished.",
+                "To hide the results from management."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.2 mentions feature toggles can be used to identify which test suites to execute."
+},
+      {
+        "question": "What is a benefit of releasing testware with the same version number as the SUT?",
+        "options": [
+                "It makes the testware run faster.",
+                "It ensures an exact match between the SUT version and the testware that can test it.",
+                "It reduces the size of the repository.",
+                "It eliminates the need for a TAF."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.2 states this ensures an exact match between SUT and testware versions."
+},
+      {
+        "question": "Which test level ensures that separately developed system components are working together in a CI/CD pipeline?",
+        "options": [
+                "Component testing",
+                "System integration testing",
+                "Unit testing",
+                "Beta testing"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.1 states system integration tests ensure separately developed components work together."
+},
+      {
+        "question": "In a continuous delivery pipeline, what usually triggers the execution of system tests?",
+        "options": [
+                "The start of the work day.",
+                "A successful deployment of the SUT components.",
+                "A manual email from the manager.",
+                "A failure in the unit tests."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 5.1.1 notes system tests are often integrated into deployment phases or triggered by successful deployment."
 }]
   },
   {
@@ -998,6 +1823,94 @@ const courseData = [
         ],
         "correctAnswer": 1,
         "explanation": "Syllabus 6.1.1 mentions that status can sometimes be 'inconclusive' and it is important for an organization to define what that means (e.g. results not clearly determined)."
+},
+      {
+        "question": "Which source of data can be collected to perform 'Trend Analysis' and monitor performance in production?",
+        "options": [
+                "Unit test logs",
+                "Production logs and monitoring data",
+                "Static analysis reports",
+                "The TAF documentation"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.1 mentions production logs and monitoring data for trend analysis."
+},
+      {
+        "question": "What is the benefit of a TAS having an analysis feature that considers test results of previous runs?",
+        "options": [
+                "It makes the tests run faster.",
+                "It can highlight trends, such as changes in the test success rate.",
+                "It automatically fixes the SUT bugs.",
+                "It eliminates the need for logging."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.1 states this feature highlights trends like success rate changes."
+},
+      {
+        "question": "A dashboard shows a 'TAS Failure'. What is the most appropriate next step for the TAE?",
+        "options": [
+                "Report a bug in the SUT.",
+                "Investigate the test automation code, environment, or connectivity for issues.",
+                "Ignore the failure as it's not a real bug.",
+                "Delete the failing test case."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.1 defines TAS failure as one where the defect is NOT in the SUT, requiring TAS investigation."
+},
+      {
+        "question": "Management wants to know if 'Defect Clusters' are forming in specific areas of the SUT. Which tool helps visualize this?",
+        "options": [
+                "A code formatter.",
+                "A reporting dashboard with data aggregation from multiple sources.",
+                "A capture/playback tool.",
+                "A spreadsheet with random test data."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.3 mentions dashboards help stakeholders see trends like defect clusters."
+},
+      {
+        "question": "Why is it important to synchronize various test logs with a time stamp?",
+        "options": [
+                "To see how much time the TAE is working.",
+                "To facilitate correlation of what occurred across TAS and SUT when a failure is reported.",
+                "To make the log files smaller.",
+                "To follow ISO 9001 standards."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.1 mentions synchronization with time stamps facilitates correlation."
+},
+      {
+        "question": "Which role is most likely interested in trends like changes in pass-fail ratios and TAS reliability?",
+        "options": [
+                "Operational stakeholders",
+                "Management stakeholders",
+                "Technical stakeholders",
+                "The customer"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.3 states management focuses on trends like pass-fail ratio and reliability."
+},
+      {
+        "question": "When a failure occurs, why is it useful to check if the same failure happened in previous runs?",
+        "options": [
+                "To see if it's a known defect in the SUT or TAS.",
+                "To ignore it if it's old.",
+                "To find out who wrote the failing test.",
+                "To calculate the total test time."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Syllabus 6.1.2 mentions checking for historical occurrences to identify known defects."
+},
+      {
+        "question": "A 'Test Progress Report' should contain test results, SUT info, and what other critical detail?",
+        "options": [
+                "The names of the developers' children.",
+                "Documentation of the test environment in which the tests were run.",
+                "The personal opinions of the TAE.",
+                "The source code of the entire SUT."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.3 states the report must contain results, SUT info, and environment documentation."
 }]
   },
   {
@@ -1153,6 +2066,94 @@ const courseData = [
         ],
         "correctAnswer": 1,
         "explanation": "Syllabus 7.1.1 suggests a systematic approach to loading/unloading the TAS and documenting components affected by SUT environment changes."
+},
+      {
+        "question": "What is the core purpose of verifying the 'Test Automation Infrastructure'?",
+        "options": [
+                "To ensure the SUT is defect-free.",
+                "To ensure the TAS components work as expected and are reliable/repeatable.",
+                "To train the manual testers.",
+                "To calculate the cost of the project."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.1 states verification is about ensuring TAS components work as expected."
+},
+      {
+        "question": "A TAE launches a tool, verifies it can access the SUT, and checks configuration settings before a run. This is establishing:",
+        "options": [
+                "Postconditions",
+                "Preconditions",
+                "Static analysis",
+                "Continuous improvement"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.1 describes these as checks/preconditions to ensure connectivity/setup."
+},
+      {
+        "question": "When 'Repeatability' of tests is lost (e.g. random failures due to race conditions), what is the recommended action?",
+        "options": [
+                "Run the test until it passes and ignore the failures.",
+                "Move the unreliable test cases from the active suite and analyze them separately.",
+                "Buy faster hardware to eliminate race conditions.",
+                "Ignore the tests as they are 'flaky'."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.2 recommends moving unreliable tests from the active suite for separate analysis."
+},
+      {
+        "question": "A TAE finds that the TAS causes the SUT to behave differently than when tested manually. What is this called?",
+        "options": [
+                "Static Analysis",
+                "Intrusiveness",
+                "Interoperability",
+                "Self-healing"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.2 defines intrusiveness as the TAS affecting SUT functionality/performance."
+},
+      {
+        "question": "What is a primary use of 'Static Analysis' for a TAE regarding the TAF?",
+        "options": [
+                "To run the tests faster.",
+                "To identify security violations (e.g. plaintext passwords) and improve code quality.",
+                "To replace the need for a SUT.",
+                "To generate screenshots."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.4 mentions static analysis for security violations and code quality."
+},
+      {
+        "question": "Why is 'Automated Installation' of a TAS from a repository beneficial?",
+        "options": [
+                "It makes the TAS look more professional.",
+                "It guarantees that all testers use the same version and configuration of the TAS.",
+                "It eliminates the need for a license.",
+                "It fixes bugs in the operating system."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.1 states automated installation guarantees consistency in version and configuration."
+},
+      {
+        "question": "When performing 'Root Cause Analysis' on a failure, which data is considered primary?",
+        "options": [
+                "SUT logs",
+                "Data collected from the TAS (test logs, performance data).",
+                "Manual test reports.",
+                "The business analyst's meeting notes."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 6.1.2 states data from the TAS is primary, while SUT data is secondary for analysis."
+},
+      {
+        "question": "What is the consequence of 'Missing Assertions' in an automated test script?",
+        "options": [
+                "The test runs faster.",
+                "The test results may be inconclusive as the script doesn't actually verify anything.",
+                "The SUT will crash.",
+                "The tool will automatically add them."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 7.1.3 mentions missing assertions may result in inconclusive test results."
 }]
   },
   {
@@ -1354,6 +2355,105 @@ const courseData = [
         ],
         "correctAnswer": 1,
         "explanation": "Syllabus 8.1.4 mentions 'Data aging' where test automation manipulates date fields to keep data up to date from a testing perspective."
+},
+      {
+        "question": "Which tool uses machine learning to detect changed locators and automatically fix them?",
+        "options": [
+                "Data aging tools.",
+                "Self-healing AI algorithms.",
+                "Static analysis tools.",
+                "Schema validation tools."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.1 mentions self-healing algorithms based on ML to fix test cases with changed locators."
+},
+      {
+        "question": "What does 'Schema Validation' help a TAE identify in API testing?",
+        "options": [
+                "The color of the API documentation.",
+                "If mandatory response elements are present and match defined data types.",
+                "The password of the developer.",
+                "The number of concurrent users."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.1 defines schema validation as checking if mandatory elements are present and types match."
+},
+      {
+        "question": "A regression test suite takes too long to run overnight. What is a possible technical improvement?",
+        "options": [
+                "Deleting half of the tests.",
+                "Test execution concurrency (running in parallel on different environments).",
+                "Running tests only once a month.",
+                "Switching to manual testing."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.2 suggests concurrent testing to reduce execution time."
+},
+      {
+        "question": "Why should 'Setup and Teardown' methods be used instead of repeating code in every script?",
+        "options": [
+                "To make the scripts longer.",
+                "To decrease maintenance efforts by updating code in one place.",
+                "To prevent the SUT from crashing.",
+                "To follow BDD standards."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.2 states setup/teardown methods decrease maintenance by having changes in one place."
+},
+      {
+        "question": "What is an opportunity for using test automation beyond actual testing activities?",
+        "options": [
+                "Writing the SUT source code.",
+                "Environment setup and data creation (e.g. registering users via APIs).",
+                "Hiring new team members.",
+                "Designing marketing materials."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.4 lists environment setup and control as a nonspecific test activity for automation."
+},
+      {
+        "question": "A TAE is refactoring the TAA to support a change in the SUT (e.g. moving from UI to API). This is an example of:",
+        "options": [
+                "Incremental implementation of a minimum viable product.",
+                "Refactoring the TAA to accommodate changes in the SUT.",
+                "Deleting the TAF.",
+                "Ignoring the SUT evolution."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.3 mentions refactoring the TAA as the SUT evolves."
+},
+      {
+        "question": "Which tool can generate screenshots or videos of UI tests for release documentation or marketing?",
+        "options": [
+                "Static analysis tools.",
+                "Modern UI test automation tools with built-in capture capabilities.",
+                "API testing tools.",
+                "Data aging tools."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.4 mentions UI tools can create screenshots/videos for documentation/marketing."
+},
+      {
+        "question": "Which technique avoids 'Polling' by instead reacting only when a specific SUT event occurs?",
+        "options": [
+                "Hard coded waits",
+                "Event subscription",
+                "Static analysis",
+                "Linear scripting"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.2 defines event subscription as an alternative to polling."
+},
+      {
+        "question": "A team uses 'Batch Jobs' in parallel in their CI/CD. This is a best practice to:",
+        "options": [
+                "Reduce the number of developers.",
+                "Optimize test execution time.",
+                "Make the pipeline more complex.",
+                "Hide failures."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Syllabus 8.1.2 mentions running batch jobs in parallel to optimize execution time."
 }]
   },
   {
