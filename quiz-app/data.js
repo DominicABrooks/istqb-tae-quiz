@@ -6,12 +6,22 @@ const courseData = [
     content: `
       <h2>0. Exam Rules & Mechanics</h2>
       <div class="card">
-        <h3>Exam Strategy</h3>
+        <h3>Exam Structure & Point Allocation</h3>
         <ul>
-            <li><strong>No K1 Questions</strong>: You will not be asked simple recall definitions. You must <em>apply</em> knowledge.</li>
-            <li><strong>Point Allocation</strong>: K2 = 1 pt; K3 = 1-3 pts; K4 = 2-3 pts.</li>
-            <li><strong>Passing Score</strong>: At least 65%.</li>
+            <li><strong>No K1 Questions</strong>: Unlike Foundation, this exam has zero recall questions. You must <em>apply</em> and <em>analyze</em>.</li>
+            <li><strong>K2 (Understand)</strong>: 1 point per question. Focuses on explaining concepts.</li>
+            <li><strong>K3 (Apply)</strong>: 1-3 points. Requires applying a technique to a specific scenario.</li>
+            <li><strong>K4 (Analyze)</strong>: 2-3 points. High-stakes questions requiring root-cause analysis or evaluation.</li>
+            <li><strong>Passing Score</strong>: 65% (Typically 26 correct answers out of 40).</li>
         </ul>
+      </div>
+      <div class="card">
+        <h3>Scenario-Based Strategy</h3>
+        <p>The exam is 100% scenario-based. You will be given multi-paragraph business situations. Always identify:</p>
+        <ol>
+            <li><strong>The Core Constraint</strong>: (e.g., "The network is unstable" or "Team has no Java experience").</li>
+            <li><strong>The Question Verbs</strong>: (e.g., "Which is the FIRST step", "Which is NOT a limitation").</li>
+        </ol>
       </div>
     `,
     quiz: [
@@ -37,22 +47,51 @@ const courseData = [
   },
   {
     id: "ch1",
-    title: "1. Intro & Objectives",
+    title: "1. Introduction and Objectives for Test Automation",
     content: `
-      <h2>1. Introduction and Objectives</h2>
+      <h2>1. Introduction and Objectives for Test Automation</h2>
       <div class="card">
-          <h3>What to Automate vs What NOT to Automate</h3>
-          <p><strong>Automate First (High ROI):</strong> Highly repetitive regression tests, critical paths, data-driven tests.</p>
-          <p><strong>Do NOT Automate (Low ROI):</strong> Usability testing, exploratory testing, highly volatile UIs.</p>
+        <h3>Objectives of Test Automation</h3>
+        <p>Automation isn't just "running scripts." It's a suite of activities:</p>
+        <ul>
+            <li><strong>Purpose-built tools</strong> to control and set up test suites.</li>
+            <li><strong>Automated execution</strong> of defined test cases.</li>
+            <li><strong>Automated comparison</strong> of actual vs expected results (Assertions).</li>
+        </ul>
       </div>
       <div class="card">
-          <h3>The Oracle Problem & Risks</h3>
-          <p>Test automation can <em>only</em> check what you tell it to check. It requires a programmed test oracle.</p>
-          <p><strong>Major Risks:</strong> Unrealistic expectations, false sense of security, high maintenance costs.</p>
+        <h3>Advantages vs. Disadvantages</h3>
+        <p><strong>Pros:</strong></p>
+        <ul>
+            <li><strong>Volume & Speed</strong>: More tests per build; faster than manual.</li>
+            <li><strong>Complexity</strong>: Tests that humans can't do (e.g., millisecond response timing).</li>
+            <li><strong>Reliability</strong>: Reduced human error and improved consistency across cycles.</li>
+            <li><strong>System Health</strong>: Quicker feedback and better system reliability (availability/recoverability).</li>
+        </ul>
+        <p><strong>Cons:</strong></p>
+        <ul>
+            <li><strong>Cost</strong>: High initial investment (Hardware, TAE hires, Training).</li>
+            <li><strong>Maintenance</strong>: High effort if SUT is volatile.</li>
+            <li><strong>Rigidity</strong>: Less adaptable to sudden UI changes than a human.</li>
+            <li><strong>New Risks</strong>: Automation can introduce its own defects.</li>
+        </ul>
       </div>
       <div class="card">
-          <h3>Agile Pyramid Gotcha</h3>
-          <p>In Agile, automated component tests should be significantly higher in volume than automated acceptance/UI tests.</p>
+        <h3>Test Automation in the SDLC</h3>
+        <ul>
+            <li><strong>Waterfall</strong>: Implementation happens in parallel with dev, but execution usually waits for the <strong>Verification Phase</strong> when components are ready.</li>
+            <li><strong>V-Model</strong>: Automation is planned early. A TAF is recommended for <em>every</em> level (Component, System, etc.).</li>
+            <li><strong>Agile</strong>: Focus on <strong>In-Sprint Automation</strong>. Eliminates silos between dev/test. Heavily relies on the Testing Pyramid (Unit > UI).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tool Selection Strategy</h3>
+        <p>Evaluate based on requirements baseline:</p>
+        <ul>
+            <li><strong>Technology Match</strong>: Does the tool support the SUT's language and internal interfaces?</li>
+            <li><strong>Team Composition</strong>: Low-code/No-code for manual teams; SUT-matching languages for technical teams.</li>
+            <li><strong>Lifecycle Cost</strong>: Total cost of ownership, not just the sticker price.</li>
+        </ul>
       </div>
     `,
     quiz: [
@@ -315,20 +354,42 @@ const courseData = [
   },
   {
     id: "ch2",
-    title: "2. Preparation & SUT",
+    title: "2. Preparing for Test Automation",
     content: `
       <h2>2. Preparing for Test Automation</h2>
       <div class="card">
-        <h3>SUT Testability</h3>
+        <h3>SUT Testability Pillars</h3>
+        <p>Testability is a non-functional requirement. Key areas include:</p>
         <ul>
-          <li><strong>Observability</strong>: Ability to view internal state based on outputs (logs, APIs).</li>
-          <li><strong>Controllability</strong>: Ability to manipulate the SUT into a specific state.</li>
-          <li><strong>Isolability (Exam Trap)</strong>: Ability to test a component independently (Mocks/Stubs).</li>
+          <li><strong>Observability</strong>: Viewing internal state (Logs, API responses).</li>
+          <li><strong>Controllability</strong>: Manipulating state (UI, function calls, electronic signals).</li>
+          <li><strong>Architecture Transparency</strong>: Clear documentation of interfaces.</li>
+          <li><strong>Isolability</strong>: Ability to test components in isolation (Mocks/Stubs).</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Tool Evaluation</h3>
-        <p>Never buy a tool based on marketing. You <strong>must execute a Proof of Concept (PoC)</strong> against your actual SUT.</p>
+        <h3>Infrastructure Configuration</h3>
+        <p>For better testability, use these technical solutions:</p>
+        <ul>
+          <li><strong>Accessibility Identifiers</strong>: IDs generated by frameworks (or set manually) for stable locators.</li>
+          <li><strong>System Env Variables</strong>: Changing app parameters to enable easier admin-level testing.</li>
+          <li><strong>Deployment Variables</strong>: Variables set <em>before</em> deployment to configure the instance.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Test Automation Environments</h3>
+        <ul>
+          <li><strong>Local Dev</strong>: Where software is created. White-box testing using IDEs.</li>
+          <li><strong>Build Environment</strong>: CI/CD agents. Component/Integration tests & Static analysis.</li>
+          <li><strong>Integration Environment</strong>: First environment where <strong>Monitoring</strong> must be present. Black-box system integration.</li>
+          <li><strong>Pre-production</strong>: Mirror of production. Focus on <strong>Non-functional</strong> (Performance) and UAT.</li>
+          <li><strong>Production/Operational</strong>: Real-time assessment. Practices: <strong>Canary Release</strong>, Blue/Green, A/B Testing.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Evaluating Tools & Strategies</h3>
+        <p>Analyze the SUT scope (Web vs Mobile vs API). Gather requirements from stakeholders (Manual testers, BAs).</p>
+        <p><strong>Comparison Table</strong>: Tools in columns, requirements in rows. Cells contain properties and priorities to justify the proposed tool set.</p>
       </div>
     `,
     quiz: [
@@ -624,25 +685,44 @@ const courseData = [
   },
   {
     id: "ch3",
-    title: "3. TAA Architecture",
-    content: `
-      <h2>3. Test Automation Architecture</h2>
+    title: "3. Test Automation Architecture",
+    content: `      <h2>3. Test Automation Architecture</h2>
       <div class="card">
-        <h3>TAA vs TAF vs TAS</h3>
+        <h3>Major Tool Capabilities</h3>
+        <p>A TAA must provide four core capabilities:</p>
         <ul>
-            <li><strong>TAA (Architecture)</strong>: The high-level blueprint.</li>
-            <li><strong>TAF (Framework)</strong>: The core code/libraries (e.g., Selenium).</li>
-            <li><strong>TAS (Solution)</strong>: The final deployed product testing a specific app.</li>
+          <li><strong>Test Generation</strong>: Automated design from models (Optional, but powerful).</li>
+          <li><strong>Test Definition</strong>: Managing scripts, keywords, and data separation.</li>
+          <li><strong>Test Execution</strong>: Running tests, logging, and reporting results.</li>
+          <li><strong>Test Adaptation</strong>: Bridge drivers (WebDriver, API clients) to specific SUT interfaces.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>The Four Layers</h3>
+        <h3>TAF Layering Model</h3>
+        <p>Keep layers low to avoid complexity. Crucial rule: <strong>Test Scripts should NOT call Core Libraries directly</strong>. They must go through the Business Logic layer.</p>
         <ol>
-            <li><strong>Test Generation Layer</strong>: Maps abstract manual tests to concrete automated tests.</li>
-            <li><strong>Test Definition Layer</strong>: Where actual scripts and keywords are implemented.</li>
-            <li><strong>Test Execution Layer</strong>: Runs tests, logs steps, captures screenshots.</li>
-            <li><strong>Test Adaptation Layer</strong>: The bridge connecting execution to the SUT (WebDriver, API clients).</li>
+          <li><strong>Test Scripts</strong>: Specific test cases and user flows.</li>
+          <li><strong>Business Logic</strong>: SUT-dependent libraries (Page Objects).</li>
+          <li><strong>Core Libraries</strong>: SUT-independent (Logging, Reporting). Reusable across projects.</li>
+          <li><strong>Test Adaptation</strong>: Drivers that interact with SUT protocols.</li>
         </ol>
+      </div>
+      <div class="card">
+        <h3>Advanced Design Patterns</h3>
+        <ul>
+          <li><strong>Page Object Model (POM)</strong>: Decouples UI structure from test logic.</li>
+          <li><strong>Flow Model</strong>: An expansion of POM. A "double facade" that stores complex user actions (e.g., "Checkout Flow"). Improves abstraction.</li>
+          <li><strong>Facade</strong>: Simplifies complex internal code for test writers.</li>
+          <li><strong>Singleton</strong>: Ensures one driver instance per session.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Scripting Approaches</h3>
+        <ul>
+            <li><strong>Structured Scripting</strong>: Introduces reusable elements. Requires programming knowledge.</li>
+            <li><strong>TDD</strong>: Red-Green-Refactor. Simplifies component level tests and reduces defect propagation.</li>
+            <li><strong>BDD</strong>: Given/When/Then. High maintenance for natural language steps, but excellent for team communication.</li>
+        </ul>
       </div>
     `,
     quiz: [
@@ -1092,22 +1172,46 @@ const courseData = [
   },
   {
     id: "ch4",
-    title: "4. Implementation",
+    title: "4. Implementing Test Automation",
     content: `
       <h2>4. Implementing Test Automation</h2>
       <div class="card">
-        <h3>Scripting Approaches</h3>
+        <h3>Pilot Project Guidelines</h3>
+        <p>A pilot is not just a demo. It must:</p>
         <ul>
-            <li><strong>Data-Driven Testing (DDT)</strong>: Separates test data from scripts. Uses BVA.</li>
-            <li><strong>Keyword-Driven Testing (KDT)</strong>: Uses high-level action words (Login) so non-technical testers can write tests.</li>
-            <li><strong>BDD</strong>: Given/When/Then plain English format.</li>
+            <li><strong>Define Scope</strong>: Select representative test cases.</li>
+            <li><strong>Create Prototypes</strong>: Show pros/cons of different scripting approaches.</li>
+            <li><strong>Integrate Early</strong>: Test in CI/CD to find environmental bottlenecks.</li>
+            <li><strong>Evaluate Non-Technical</strong>: Assess team knowledge, structure, and licensing rules.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Design Patterns</h3>
+        <h3>Technical Deployment Risks</h3>
         <ul>
-            <li><strong>Page Object Model (POM)</strong>: Centralizes UI locators.</li>
-            <li><strong>Flow Model Pattern</strong>: Used when SUT structure changes frequently. Separates locators from business flow.</li>
+            <li><strong>Connectivity</strong>: Firewall openings and database access.</li>
+            <li><strong>Resource Utilization</strong>: High CPU/RAM usage by TAS impacting SUT performance.</li>
+            <li><strong>Mobile Specific</strong>: Devices must be powered, have battery, and stable network access.</li>
+            <li><strong>Automatic Updates</strong>: Agents or OS updates breaking the test harness.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The 6 Logging Levels</h3>
+        <ol>
+            <li><strong>Fatal</strong>: Aborts execution.</li>
+            <li><strong>Error</strong>: Interaction failed, test failed.</li>
+            <li><strong>Warn</strong>: Unexpected event, but flow continues.</li>
+            <li><strong>Info</strong>: Basic test case progress.</li>
+            <li><strong>Debug</strong>: Investigative details (not for basic logs).</li>
+            <li><strong>Trace</strong>: Even more verbose than debug.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>TAS Maintainability (Clean Code)</h3>
+        <ul>
+            <li><strong>Naming</strong>: clear targets (e.g., loginButton vs btn1).</li>
+            <li><strong>No Hardcoding</strong>: Use constants and Data-Driven Testing (DDT).</li>
+            <li><strong>Abstraction</strong>: Use Flow Models to avoid long, complex methods.</li>
+            <li><strong>Static Analysis</strong>: Mandatory to find security flaws (plaintext passwords) and poor design.</li>
         </ul>
       </div>
     `,
@@ -1415,55 +1519,53 @@ const courseData = [
   },
   {
     id: "ch5",
-    title: "5. Deployment",
+    title: "5. Implementation and Deployment Strategies for Test Automation",
     content: `
-      <h2>5. Deployment Strategies</h2>
+      <h2>5. Implementation and Deployment Strategies for Test Automation</h2>
       <div class="card">
-        <h3>Pilot Projects</h3>
-        <p>Before organization-wide rollout, run a pilot to establish metrics, learn limitations, and prove ROI.</p>
+        <h3>Continuous Integration (CI) Pipeline Levels</h3>
+        <ul>
+            <li><strong>Configuration Tests</strong>: Subspecies of component tests. Verify paths and file existence for the TAF/TAS project itself.</li>
+            <li><strong>Component Tests</strong>: Execute on individual classes/web components. Act as <strong>Quality Gates</strong>.</li>
+            <li><strong>System Integration Tests</strong>: Ensure separately developed components work together.</li>
+            <li><strong>System Tests</strong>: Integrated into the continuous deployment pipeline as the last quality gate.</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Environments</h3>
-        <p><strong>Preproduction (Staging)</strong>: The ONLY environment suited for automated performance efficiency testing and final UAT, as it mirrors production.</p>
+        <h3>Deployment Strategies</h3>
+        <ol>
+            <li><strong>Part of Deployment Phase</strong>: Tests run immediately after deployment. If they fail, deployment is rolled back automatically.</li>
+            <li><strong>Separate Triggered Pipeline</strong>: Triggered by successful deployment. Used for different test suites that don't act as gates. Manual rollback required.</li>
+        </ol>
+        <p><strong>Deployment Checks</strong>: Simple scripts to verify the SUT is <em>reachable</em> (not functional suitability).</p>
+      </div>
+      <div class="card">
+        <h3>Contract Testing & API Dependencies</h3>
+        <p>Crucial for microservices to communicate without breaking each other.</p>
+        <ul>
+            <li><strong>Consumer-Driven</strong>: Consumer sets expectations for the provider.</li>
+            <li><strong>Provider-Driven</strong>: Provider creates the contract showing how services operate.</li>
+            <li><strong>API Baseline</strong>: Strategy must be built on API connections and documentation (parameters, headers, object types).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Configuration Management</h3>
+        <ul>
+            <li><strong>Environment Data</strong>: URLs, credentials, and data stored with testware.</li>
+            <li><strong>Version Matching</strong>: Releasing testware with the same version number as the SUT for exact parity.</li>
+            <li><strong>Feature Toggles</strong>: Used to dynamically select which test suites to execute.</li>
+        </ul>
       </div>
     `,
-    quiz: [
-      {
-        "question": "[Official Exam] Which statement is correct?",
-        "options": [
-          "Tests are not executed as part of the deployment phase",
-          "Tests are not executed as a separate pipeline, triggered by the successful deployment",
-          "Test cases do not act as a quality gate when different automated test suites will run on  each deployment",
-          "Pipelines are not recommended for regression testing due to the extensive scope and size  of these tests",
-          "Select ONE option."
-        ],
-        "correctAnswer": 2,
-        "explanation": "[Official Explanation] a) Is not correct. Tests are executed during deployment.  b) Is not correct. Tests are triggered to execute after successful  deployment.  c) Is correct. It is not a correct statement since tests do not act as quality  gates for deployment.  d)  Is not correct. Pipelines are an excellent solution for periodic testing,  such as regression tests, and the size of these tests does not impact  their effectiveness."
-      },
-      {
-        "question": "[Official Exam] How is configuration management used in test automation?",
-        "options": [
-          "It enables the management of test data and test environment configurations",
-          "The SUT configuration can be stored and easily removed",
-          "It enables management of user rights for accessing test automation",
-          "Test automation results can easily be analyzed"
-        ],
-        "correctAnswer": 0,
-        "explanation": "[Official Explanation] a) Is correct. Test data and test environment configurations can be under  configuration management.  b) Is not correct. The SUT configuration can be under configuration  management, but it is not related to test automation.  c) Is not correct. User rights management is not related to configuration  management.  d) Is not correct. Configuration management does not support test  automation results analysis."
-      },
+    "quiz": [
       {
         "question": "[Official Exam] Which item below is NOT part of the test environment configuration?",
-        "options": [
-          "Uniform resource locators (URLs)",
-          "Credentials",
-          "Test data",
-          "Common core library"
-        ],
+        "options": ["Uniform resource locators (URLs)", "Credentials", "Test data", "Common core library"],
         "correctAnswer": 3,
-        "explanation": "[Official Explanation] a) Is not correct. URLs are part of the test environment configuration.  b) Is not correct. Credentials are part of the test environment  configuration.  c) Is not correct. Test data is part of the test environment configuration.  d) Is correct. The test environment configuration is a part of the common  core library, not vice versa."
+        "explanation": "The test environment configuration is a part of the common core library (or stored with testware), not vice versa."
       },
       {
-        "question": "[Official Exam] How does contract testing NOT contribute to API test automation dependencies in an  infrastructure?",
+        "question": "[Official Exam] How does contract testing NOT contribute to API test automation dependencies in an infrastructure?",
         "options": [
           "Ensures that APIs adhere to predefined contracts for communication",
           "Can be used to test the communication of microservices",
@@ -1471,38 +1573,26 @@ const courseData = [
           "Verifies whether a system satisfies its contractual requirements"
         ],
         "correctAnswer": 3,
-        "explanation": "[Official Explanation] a) Is not correct. Contract testing ensures APIs follow predefined  communication agreements, helping manage API dependencies.  b) Is not correct. Contract testing can be used to test communication  between microservices.  c) Is not correct. Contract testing can validate the compatibility of two  separate systems.  d) Is correct. Contract testing has no relation to the contractual  requirements."
+        "explanation": "Contract testing verifies API compatibility and communication rules, but has no relation to formal contractual requirements of a system."
       },
       {
-        "question": "[Official Exam] You are on a project where the teams are working on breaking down an old monolithic web service  into several microservices.  Which of the following documents can assist you in identifying  dependencies and developing your Test Automation Solution (TAS) for API testing?  i.  Application programming interface (API) specification  ii.  System architecture diagram  iii.  Test strategy  iv.  Release notes",
-        "options": [
-          "i, ii, and iv",
-          "i and ii",
-          "ii, iii, and iv",
-          "i"
-        ],
+        "question": "Which environment is the ONLY one suited for automated performance efficiency testing?",
+        "options": ["Sandbox", "Integration", "Preproduction (Staging)", "Production"],
+        "correctAnswer": 2,
+        "explanation": "Preproduction mirrors production exactly, making it the only valid place to get accurate performance metrics."
+      },
+      {
+        "question": "Before deploying a massive new Test Automation Framework globally across all teams, what MUST you do?",
+        "options": ["Train all developers on the framework.", "Execute a Pilot Project on a small team.", "Migrate all manual tests immediately.", "Update all core dependencies."],
         "correctAnswer": 1,
-        "explanation": "[Official Explanation] a) Is not correct. Release notes do not help to learn the API connections  and details.  b) Is correct - API specification provides details about endpoints, and the  system architecture diagram shows the relationships between different  components.  c) Is not correct - The test strategy and release notes don't provide  specific information about API dependencies needed for building a  TAS.  d)  Is not correct - The API specification alone is not sufficient; the system  architecture diagram is also needed to understand the relationships  between different services."
+        "explanation": "A Pilot Project proves the ROI, establishes metrics, and uncovers limitations before a risky global rollout."
       },
       {
-        question: "Which environment is the ONLY one suited for automated performance efficiency testing?",
-        options: ["Sandbox", "Integration", "Preproduction (Staging)", "Production"],
-        correctAnswer: 2,
-        explanation: "Preproduction mirrors production exactly, making it the only valid place to get accurate performance metrics."
+        "question": "In a CI/CD pipeline, what type of automated tests should act as 'Quality Gates' that block a build if they fail?",
+        "options": ["Long-running UI tests", "Performance tests", "Fast, reliable Unit and API sanity tests", "Exploratory tests"],
+        "correctAnswer": 2,
+        "explanation": "Quality gates must be fast and deterministic. Flaky or long UI tests should run out-of-band to prevent slowing down the pipeline."
       },
-      {
-        question: "Before deploying a massive new Test Automation Framework globally across all teams, what MUST you do?",
-        options: ["Train all developers on the framework.", "Execute a Pilot Project on a small team.", "Migrate all manual tests immediately.", "Update all core dependencies."],
-        correctAnswer: 1,
-        explanation: "A Pilot Project proves the ROI, establishes metrics, and uncovers limitations before a risky global rollout."
-      },
-      {
-        question: "In a CI/CD pipeline, what type of automated tests should act as 'Quality Gates' that block a build if they fail?",
-        options: ["Long-running UI tests", "Performance tests", "Fast, reliable Unit and API sanity tests", "Exploratory tests"],
-        correctAnswer: 2,
-        explanation: "Quality gates must be fast and deterministic. Flaky or long UI tests should run out-of-band to prevent slowing down the pipeline."
-      }
-    ,
       {
         "question": "In a microservices architecture, Team A (Consumer) depends on an API provided by Team B (Provider). Team A wants to ensure that any changes Team B makes to the API won't break their integration. Which approach is most suitable according to Chapter 5.1.3?",
         "options": [
@@ -1682,21 +1772,36 @@ const courseData = [
   },
   {
     id: "ch6",
-    title: "6. Reporting & Metrics",
+    title: "6. Test Automation Reporting and Metrics",
     content: `
-      <h2>6. Test Automation Reporting & Metrics</h2>
+      <h2>6. Test Automation Reporting and Metrics</h2>
       <div class="card">
-        <h3>Metric Categories</h3>
+        <h3>Failure Analysis (The 5 Steps)</h3>
+        <p>When a failure is reported, the TAE must follow a systematic flow:</p>
+        <ol>
+            <li><strong>Historical Check</strong>: Did this happen in previous runs? (Known SUT/TAS defect).</li>
+            <li><strong>Identification</strong>: Identify the specific test case and its purpose.</li>
+            <li><strong>Step Level</strong>: Pinpoint the exact test step where the failure occurred.</li>
+            <li><strong>SUT State Analysis</strong>: Analyze screenshots, API, and network logs to see the SUT's condition.</li>
+            <li><strong>Logging Defect</strong>: Include all justifying logs/evidence in the defect management system.</li>
+        </ol>
+        <p><em>Note: Data from the TAS is <strong>Primary</strong>; data from the SUT is <strong>Secondary</strong> for analysis.</em></p>
+      </div>
+      <div class="card">
+        <h3>Stakeholder Dashboards</h3>
         <ul>
-            <li><strong>External Quality Metrics</strong>: Measures SUT health (defect density).</li>
-            <li><strong>Internal TAS Metrics</strong>: Measures automation code health (static analysis warnings).</li>
-            <li><strong>TAS Development Metrics</strong>: Measures ROI, time saved, maintenance effort.</li>
+            <li><strong>Management</strong>: Focus on trends (pass/fail ratio), defect clusters, and performance degradation. Use traffic lights and drill-down charts.</li>
+            <li><strong>Operations</strong>: Focus on product use related metrics.</li>
+            <li><strong>Technical</strong>: Focus on low-level logs and environment documentation.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>ROI & Trace IDs</h3>
-        <p>If maintenance costs exceed the time saved, ROI is negative.</p>
-        <p><strong>Trace IDs</strong>: Essential for correlating performance bottlenecks across microservices.</p>
+        <h3>Advanced Reporting Concepts</h3>
+        <ul>
+            <li><strong>Correlation/Trace IDs</strong>: Essential to trace behavior across microservices from frontend to database.</li>
+            <li><strong>Inconclusive Status</strong>: Organizations must define what this means (usually environment outages or lack of assertions).</li>
+            <li><strong>ML/AI Analysis</strong>: Using algorithms to group common defects and reduce time spent finding broken locators.</li>
+        </ul>
       </div>
     `,
     quiz: [
@@ -1915,20 +2020,34 @@ const courseData = [
   },
   {
     id: "ch7",
-    title: "7. Verification & Flakiness",
+    title: "7. Verifying the Test Automation Solution",
     content: `
-      <h2>7. Verifying the TAS</h2>
+      <h2>7. Verifying the Test Automation Solution</h2>
       <div class="card">
-        <h3>Triaging Failures (Crucial!)</h3>
+        <h3>Infrastructure Verification</h3>
+        <p>Before testing the SUT, verify the TAS components:</p>
         <ul>
-            <li><strong>True Positive</strong>: Test fails because of a real SUT bug.</li>
-            <li><strong>False Positive</strong>: Test fails, but NO bug exists (timeout, bad locator). Ruins trust.</li>
-            <li><strong>False Negative</strong>: Test passes, but misses a real bug.</li>
+            <li><strong>Automated Installation</strong>: Guarantees consistency across all testers/environments.</li>
+            <li><strong>Connectivity Checks</strong>: (Preconditions) Logging into servers and verifying tool access to SUT.</li>
+            <li><strong>TAF Component Testing</strong>: Testing the framework itself (e.g., verifying object recognition works for all classes).</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Flaky Tests & Sync</h3>
-        <p>Replace static/hard sleeps (Wait 5s) with dynamic waits (Wait UNTIL element visible). ISTQB penalizes static waits.</p>
+        <h3>Behavior & Coupling</h3>
+        <ul>
+            <li><strong>Correct Behavior</strong>: Check for completeness (Expected results present) and version consistency.</li>
+            <li><strong>Intrusiveness</strong>: TAS impacting SUT performance. High intrusion ruins confidence; results must be reproducible manually.</li>
+            <li><strong>Repeatability</strong>: Fragile tests (Race conditions) must be isolated for separate analysis to maintain trust.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Static Analysis for TAF</h3>
+        <p>Static scans should occur early in the SDLC via pipelines:</p>
+        <ul>
+            <li><strong>Security</strong>: Detect plaintext passwords or weak encryption in test scripts.</li>
+            <li><strong>Code Quality</strong>: Suggest remedies for poor library calls and improve resource handling (try/catch blocks).</li>
+            <li><strong>Feedback</strong>: Immediate categorization of flaws (Critical, High, Medium, Low).</li>
+        </ul>
       </div>
     `,
     quiz: [
@@ -2162,18 +2281,36 @@ const courseData = [
     content: `
       <h2>8. Continuous Improvement</h2>
       <div class="card">
-        <h3>Code Quality</h3>
-        <p>Apply DRY (Don't Repeat Yourself) and SOLID principles to your test code.</p>
+        <h3>Optimizing Scripting & Sync</h3>
+        <p>Evaluate wait mechanisms carefully:</p>
+        <ol>
+            <li><strong>Hardcoded Waits</strong>: Root cause of most flakiness. Avoid.</li>
+            <li><strong>Dynamic Polling</strong>: Flexible; waits only as long as needed.</li>
+            <li><strong>Event-based Subscription</strong>: The "Gold Standard." Subscribes to SUT events (requires SUT support).</li>
+        </ol>
+        <p><strong>Retrofitting</strong>: Upgrading older scripting techniques to newer, more maintainable ones (e.g., Linear to Flow Model).</p>
       </div>
       <div class="card">
-        <h3>Updating Core Libraries (Gotcha)</h3>
-        <p>Do NOT blindly update dependencies like Selenium. Follow this order:</p>
-        <ol>
-            <li><strong>Perform a pilot</strong> on a small subset of tests.</li>
-            <li><strong>Determine the impact</strong> (how many scripts failed).</li>
-            <li><strong>Create an adoption plan</strong> (who fixes it, when).</li>
-            <li><strong>Update dependencies</strong> globally.</li>
-        </ol>
+        <h3>Execution Efficiencies</h3>
+        <ul>
+            <li><strong>Concurrency</strong>: Running tests in parallel across different environments to save time.</li>
+            <li><strong>Batch Jobs</strong>: Scheduling automated runs (e.g., every morning) to reduce manual interaction.</li>
+            <li><strong>Duplication Removal</strong>: Analyzing coverage to remove redundant test steps.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Non-Testing Automation</h3>
+        <p>TAEs should seek opportunities <em>outside</em> the test suite:</p>
+        <ul>
+            <li><strong>Env Setup</strong>: Using APIs to register users and populate profiles automatically.</li>
+            <li><strong>Data Aging</strong>: Manipulating DB date fields to keep test data current.</li>
+            <li><strong>Housekeeping</strong>: Automated removal of old logs and temporary testware.</li>
+            <li><strong>Marketing Assets</strong>: Generating screenshots/videos for release documentation.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Refactoring for Testability</h3>
+        <p>If the SUT architecture changes (e.g., adding APIs), refactor the TAA immediately. "Bolt-on" features are expensive later in the SDLC.</p>
       </div>
     `,
     quiz: [
