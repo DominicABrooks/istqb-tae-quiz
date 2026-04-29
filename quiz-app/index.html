@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTQB TAE Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">ISTQB TAE 🎓</div>
+            <nav id="nav-menu">
+                <!-- Chapters injected here via JS -->
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <div id="learning-view" class="view active">
+                <div class="content-header">
+                    <h1 id="chapter-title">Select a Chapter</h1>
+                    <button id="start-quiz-btn" class="btn primary" style="display:none;">Take Chapter Quiz</button>
+                </div>
+                <div id="chapter-content" class="chapter-content">
+                    <div class="placeholder">Select a module from the sidebar to start learning.</div>
+                </div>
+            </div>
+
+            <div id="quiz-view" class="view">
+                <div class="quiz-header">
+                    <h2>Chapter Quiz</h2>
+                    <button id="exit-quiz-btn" class="btn secondary">Back to Study Material</button>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                
+                <div id="question-block" class="question-block">
+                    <h3 class="question-text" id="question">Loading...</h3>
+                    <div class="options" id="options"></div>
+                    <div class="explanation" id="explanation"></div>
+                    <div class="controls">
+                        <button id="next-btn" class="btn primary" disabled>Next Question</button>
+                    </div>
+                </div>
+
+                <div id="score-screen" class="score-screen" style="display:none;">
+                    <h2 id="score-title">Quiz Complete!</h2>
+                    <p id="score-text"></p>
+                    <button id="restart-btn" class="btn primary">Retake Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
